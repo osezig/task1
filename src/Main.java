@@ -1,23 +1,20 @@
-public class Main {
-    public static void main(String[] args) {
-        double dog = 8;
-        System.out.println(dog);
-        var cat = 3.6;
-        System.out.println(cat);
-        var paper = 763789;
-        System.out.println(paper);
-        dog = dog + 4;
-        System.out.println(dog);
-        cat = cat + 4;
-        System.out.println(cat);
-        paper = paper + 4;
-        System.out.println(paper);
-        dog = dog - 3.5;
-        System.out.println(dog);
-        cat = cat - 1.6;
-        System.out.println(cat);
-        paper = paper - 7639;
-        System.out.println(paper);
+import java.util.Scanner;
 
-    }
-}
+public class Main {
+            public static void main(String[] args) {
+                Scanner s = new Scanner(System.in);
+                System.out.println("Введите число:");
+                String n = s.nextLine().trim();
+                char[] array = n.toCharArray();
+                int sum = 0;
+                for (char c : array) {
+                    if (!Character.isDigit(c)) {
+                        throw new IllegalArgumentException();
+                    }
+                    sum += Character.getNumericValue(c);
+                }
+                System.out.println("Суммф цифр в числе: " + sum);
+
+                }
+            }
+
