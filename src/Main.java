@@ -13,7 +13,7 @@ public class Main {
                     }
                     sum += Character.getNumericValue(c);
                 }
-                System.out.println("Суммф цифр в числе: " + sum);
+                System.out.println("Сумма цифр в числе: " + sum);
 
                 }
             }
